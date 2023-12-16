@@ -48,7 +48,23 @@ audioElement.addEventListener('timeupdate', () => {
     // Update progressBar
     const progress = (audioElement.currentTime / audioElement.duration) * 100;
     myProgressBar.value = progress;
+
+    // Update music timer
+    const currentMinutes = Math.floor(audioElement.currentTime / 60);
+    const currentSeconds = Math.floor(audioElement.currentTime % 60);
+    document.getElementById('musicTimer').innerText = `${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds}`;
+
+    // Update music length
+    const totalMinutes = Math.floor(audioElement.duration / 60);
+    const totalSeconds = Math.floor(audioElement.duration % 60);
+    document.getElementById('musicLength').innerText = `${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}`;
 });
+
+myProgressBar.addEventListener('input', () => {
+    const seekTime = (myProgressBar.value * audioElement.duration) / 100;
+    audioElement.currentTime = seekTime;
+});
+
 
 myProgressBar.addEventListener('input', () => {
     const seekTime = (myProgressBar.value * audioElement.duration) / 100;

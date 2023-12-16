@@ -9,7 +9,7 @@
 <body>
     <nav>
         <ul>
-            <li class="brand"><img src="logo.png" alt="Spotify"><span>Spotify</span></li>
+            <li class="brand"><img src="bg1.png" alt="Spotify"><span>Shaan Beats</span></li>
             <li>Home</li>
             <li>About</li>
         </ul>
@@ -77,7 +77,11 @@
     </div>
 
     <div class="bottom">
-        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="musicbar">
+            <span id="musicTimer">0:00</span>
+            <span><input type="range" name="range" id="myProgressBar" min="0" value="0" max="100"></span>
+            <span id="musicLength">0:00</span>
+        </div>
         <div class="icon">
             <i class="fa-solid fa-3x fa-backward-step" id="previous"></i>
             <i class="fa-regular fa-3x fa-circle-play" id="masterPlay"></i>
@@ -87,6 +91,7 @@
             <img src="playing.gif" alt="" id="gif">
         </div>
     </div>
+    
     <script src="https://kit.fontawesome.com/8e5acc2efa.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

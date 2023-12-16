@@ -18,7 +18,7 @@ nav{
 nav ul{
     display: flex;
     align-items: center;
-    background-color: #1DB954;
+    background-color: #02272f;
     height: 45px;
     list-style: none;
     padding-left: 10px;
@@ -29,6 +29,7 @@ nav ul li{
 .brand img{
     width: 38px;
     padding-right: 6px;
+    border-radius: 25px;
 }
 .brand{
     display: flex;
@@ -47,7 +48,8 @@ nav ul li{
     border-radius: 12px;
     padding: 34px;
     background-image: url(bg.jpg);
-
+    background-position: center;
+    background-size: 100%;
 }
 .songList h1{
     font-size: 28px;
@@ -80,7 +82,7 @@ nav ul li{
     cursor: pointer;
 }
 .songItem{
-    background-color: aliceblue;
+    background-color: #83cde0;
     color: black;
     height: 42px;
     display: flex;
@@ -109,3 +111,5 @@ nav ul li{
     opacity: 0;
     transition: opacity 0.5s ease-in;
 }
+
+
